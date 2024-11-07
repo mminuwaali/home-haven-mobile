@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "scheme": "myapp",
+    "version": "1.0.0",
+    "name": "HomeHaven",
+    "slug": "HomeHaven",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "cover",
+      "backgroundColor": "#141E30",
+      "image": "./assets/splash.png"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/logo.png"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/logo.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
