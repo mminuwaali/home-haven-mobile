@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Animated } from "react-native";
 
-function Bar(props: BarPropsType) {
+function Bar(props: IBarProps) {
     const active = React.useRef(new Animated.Value(+props.current)).current;
     const backgroundColor = active.interpolate({ inputRange: [0, 1], outputRange: ["lightgray", "darkblue"] });
 
