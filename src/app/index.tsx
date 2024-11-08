@@ -17,6 +17,7 @@ export default function WelcomeScreen() {
 
     React.useEffect(() => {
         if (user) router.replace("/main");
+        setTimeout(() => router.replace("/main"), 0);
     }, [user]);
 
     React.useEffect(() => {
@@ -40,10 +41,10 @@ export default function WelcomeScreen() {
         <Indicate index={index} length={welcome.length} />
 
         <View style={{ gap: 20 }} className="w-full px-1/10 flex-row">
-            <Animated.Text onPress={onPrev} style={{ marginLeft: animated.interpolate({ inputRange: [0, 1], outputRange: ['-30%', '0%'] }) }} className="whitespace-nowrap text-center capitalize font-bold bg-transparent p-4">
+            <Animated.Text onPress={onPrev} style={{ marginLeft: animated.interpolate({ inputRange: [0, 1], outputRange: ['-30%', '0%'] }) }} className="text-h5 text-center capitalize font-bold bg-transparent p-4">
                 back
             </Animated.Text>
-            <Animated.Text onPress={onNext} className="flex-1 whitespace-nowrap text-center capitalize font-bold text-white bg-blue-600 rounded-md py-4">
+            <Animated.Text onPress={onNext} className="flex-1 text-h5 text-center capitalize font-bold text-white bg-primary rounded-md py-4">
                 next
             </Animated.Text>
         </View>
