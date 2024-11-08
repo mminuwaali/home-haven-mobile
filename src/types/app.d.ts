@@ -40,7 +40,7 @@ interface IndicatePropsType {
 
 interface IUserContext {
     user?: IUser;
-    signin: () => void;
-    signup: () => void;
     signout: () => void;
+    signin: (data: Partial<IUser>) => void;
+    signup: (data: Partial<IUser>) => void;
 }
