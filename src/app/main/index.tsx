@@ -29,10 +29,12 @@ export default function IndexScreen() {
                 <Fontisto name="map-marker-alt" size={14} />
                 <View className="flex-1">
                     <Picker selectedValue={selectedAddress} onValueChange={itemValue => setSelectedAddress(itemValue)} className="flex-1 text-h6">
-                        <Picker.Item label="Java" value="java" />
-                        <Picker.Item label="JavaScript" value="js" />
-                    </Picker>
-                </View>
+                        <Picker.Item label="789 Oak Road, Chicago, IL 60601" value="addr1" />
+                        <Picker.Item label="321 Pine Street, Miami, FL 33101" value="addr2" />
+                        <Picker.Item label="654 Maple Drive, Seattle, WA 98101" value="addr3" />
+                        <Picker.Item label="123 Main Street, New York, NY 10001" value="addr4" />
+                        <Picker.Item label="456 Park Avenue, Los Angeles, CA 90012" value="addr5" />
+                    </Picker>                </View>
             </View>
         </View>
 
