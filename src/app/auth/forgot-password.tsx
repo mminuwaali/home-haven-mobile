@@ -18,7 +18,7 @@ export default function ForgotPasswordScreen() {
 
         <Formik
             initialValues={{ email: "" }}
-            onSubmit={values => { console.log(values); }}
+            onSubmit={() => { router.replace("/auth/reset-password") }}
             validationSchema={toFormikValidationSchema(forgotPasswordSchema)}
         >
             {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (

@@ -20,9 +20,9 @@ export default function SignupScreen() {
         </View>
 
         <Formik
-            initialValues={{ firstName: '', lastName: '', email: '', password: '' }}
-            onSubmit={(values) => { console.log(values); }}
+            onSubmit={() => { router.replace("/auth/signin") }}
             validationSchema={toFormikValidationSchema(signupSchema)}
+            initialValues={{ firstName: '', lastName: '', email: '', password: '' }}
         >
             {({ handleChange, handleSubmit, values, errors, touched }) => (
                 <View style={{ gap: 15 }} className="w-full">

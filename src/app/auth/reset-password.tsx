@@ -19,8 +19,8 @@ export default function ResetPasswordScreen() {
         </View>
 
         <Formik
+            onSubmit={() => { router.replace("/auth/signin") }}
             initialValues={{ password: '', confirmPassword: '' }}
-            onSubmit={(values) => { console.log(values); }}
             validationSchema={toFormikValidationSchema(resetPasswordSchema)}
         >
             {({ handleChange, handleSubmit, values, errors, touched }) => (

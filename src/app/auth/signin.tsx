@@ -20,7 +20,7 @@ export default function SigninScreen() {
 
         <Formik
             initialValues={{ email: '', password: '' }}
-            onSubmit={(values) => { console.log(values); }}
+            onSubmit={() => { router.replace("/main") }}
             validationSchema={toFormikValidationSchema(signinSchema)}
         >
             {({ handleChange, handleSubmit, values, errors, touched }) => (
