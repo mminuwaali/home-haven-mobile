@@ -1,5 +1,16 @@
 import React from "react";
 
+const userData: IUser = {
+    id: 1,
+    profile: null,
+    last_name: "M inuwa",
+    first_name: "Muhammad",
+    username: "mminuwaali",
+    phone_number: "08060230285",
+    email: "mminuwaali@gmail.com",
+    last_login: new Date().toString(),
+};
+
 const UserContext = React.createContext<IUserContext>({ user: undefined, signin: () => null, signup: () => null, signout: () => null });
 
 export function useUserContext() {
@@ -13,9 +24,9 @@ export function useUserContext() {
 export default function UserProvider({ children }: React.PropsWithChildren) {
     const [user, setUser] = React.useState<IUser>();
 
-    const signin = () => { };
-    const signup = () => { };
-    const signout = () => { };
+    const signin = (data: Partial<IUser>) => { setUser(userData) };
+    const signup = (data: Partial<IUser>) => { };
+    const signout = () => { setUser(undefined) };
 
     return <UserContext.Provider value={{ user, signin, signup, signout }}>{children}</UserContext.Provider>;
 }
