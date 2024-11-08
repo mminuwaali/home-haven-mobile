@@ -27,8 +27,8 @@ A modern e-commerce mobile application built with Expo, React Native, and Tailwi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/mminuwaali/home-haven.git
-cd home-haven
+git clone https://github.com/mminuwaali/home-haven-mobile.git
+cd home-haven-mobile
 
 yarn install
 yarn start
