@@ -17,7 +17,7 @@ export default function WelcomeScreen() {
 
     React.useEffect(() => {
         if (user) router.replace("/main");
-        setTimeout(() => router.replace("/main"), 0);
+        // setTimeout(() => router.replace("/main "), 0);
     }, [user]);
 
     React.useEffect(() => {
