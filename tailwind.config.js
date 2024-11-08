@@ -14,6 +14,7 @@ module.exports = {
         h3: "24px",
         h4: "18px",
         h5: "16px",
+        h6: "12px",
       },
       padding: {
         "1/2": "50%",
@@ -39,10 +40,10 @@ module.exports = {
         width: "100%",
         height: "100%",
       },
-      ".cointainer": {
+      ".cover": {
         width: "100%",
-        padding: "5%",
         height: "100%",
+        padding: "10%",
       },
     })
 
