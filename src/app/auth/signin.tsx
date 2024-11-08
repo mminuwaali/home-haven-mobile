@@ -3,11 +3,13 @@ import { Formik } from "formik";
 import { router } from "expo-router";
 import { signinSchema } from "@/src/constants/schema";
 import { toFormikValidationSchema } from "zod-formik-adapter";
+import { useUserContext } from "@/src/providers/user.provider";
 import { facebookIcon, googleIcon } from "@/src/constants/media";
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 export default function SigninScreen() {
+    const { signin } = useUserContext();
     const [visible, setVisible] = React.useState(false);
 
     return <View style={{ gap: 30 }} className="cover py-1/5">
@@ -19,8 +21,8 @@ export default function SigninScreen() {
         </View>
 
         <Formik
+            onSubmit={signin}
             initialValues={{ email: '', password: '' }}
-            onSubmit={() => { router.replace("/main") }}
             validationSchema={toFormikValidationSchema(signinSchema)}
         >
             {({ handleChange, handleSubmit, values, errors, touched }) => (
