@@ -1,27 +1,34 @@
 /// <reference types="nativewind/types" />
 
-interface ProfileLinkType {
+interface IProfileLink {
     title: string;
     onPress: () => void;
-    icon: () => JSX.Element;
+    icon: { element: React.JSX, props: object };
 };
 
-interface WelcomeType {
+interface IWelcome {
     image: any;
     title: string;
     description: string;
 };
 
-interface BarPropsType {
+interface IBarProps {
     current: boolean;
 };
 
-interface SectionPropsType {
+interface ISectionLink {
     title: string;
+    links: IProfileLink[];
+};
+
+
+interface ISectionProps {
+    title: string;
+    alt?: React.ReactNode;
     titleClassName?: string;
     headerClassName?: string;
     wrapperClassName?: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     containerClassName?: string;
 };
 
