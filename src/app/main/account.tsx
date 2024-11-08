@@ -3,10 +3,12 @@ import Section from "@/src/components/section";
 import { styles } from "@/src/constants/styles";
 import { accountLiks } from "@/src/constants/config";
 import { profileImage } from "@/src/constants/media";
+import { useUserContext } from "@/src/providers/user.provider";
 import { Fontisto, FontAwesome5, Entypo } from "@expo/vector-icons";
 import { Image, Text, TouchableOpacity, View, SectionList, SectionListRenderItem, SectionListData } from "react-native";
 
 export default function IndexScreen() {
+    const { user } = useUserContext();
     const sections = accountLiks.map(section => ({ data: section.links, title: section.title }));
 
     const renderItem: SectionListRenderItem<IProfileLink> = ({ item }) => (
@@ -33,8 +35,8 @@ export default function IndexScreen() {
             <Image className="bg-black h-14 w-14 rounded-full" />
 
             <View className="flex-1 items-start">
-                <Text className="text-h3 capitalize font-bold">john doe</Text>
-                <Text className="text-h5 text-text">username@email.com</Text>
+                <Text className="text-h3 capitalize font-bold">{user?.first_name} {user?.last_name}</Text>
+                <Text className="text-h5 text-text">{user?.email}</Text>
             </View>
 
             <FontAwesome5 name="edit" size={16} color="black" />
