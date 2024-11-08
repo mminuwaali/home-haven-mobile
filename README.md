@@ -54,5 +54,5 @@ Development Options
 ## Contact
 
 Muhammad Muhammad Inuwa - [mminuwaali@gmail.com](mailto:mminuwaali@gmail.com)
-Project Link: [Home Haven]([https://](https://github.com/mminuwaali/home-haven))
+Project Link: [Home Haven]([https://](https://github.com/mminuwaali/home-haven-mobile))
 
